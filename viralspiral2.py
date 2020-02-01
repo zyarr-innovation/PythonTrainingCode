@@ -1,0 +1,22 @@
+import turtle
+t = turtle.Pen()
+t.penup()
+turtle.bgcolor("black")
+colors=("red","yellow","white","green","gray","blue","orange")
+sides = int(turtle.numinput("Number of sides " , " how many sides in your spiral of spirals(2,6)? ",4,2,6))
+for m in range (100):
+    t.forward(m * 4)
+    position = t.position()
+    heading = t.heading()
+    print(position, heading)
+    for x in range(int(m/2)):
+        t.pendown()
+        t.pencolor(colors[x%sides])
+        t.forward(2*x)
+        t.right(360/sides-2)
+        t.penup()
+    t.setx(position[0])
+    t.sety(position[1])
+    t.setheading(heading)
+    t.left(360/sides+2)
+input("p")
