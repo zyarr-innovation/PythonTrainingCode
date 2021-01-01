@@ -4,6 +4,7 @@ t = turtle.Pen()
 t.speed(0)
 t.hideturtle()
 turtle.bgcolor("black")
+
 def draw_smiley(x,y):
     t.penup()
     t.setpos(x,y)
@@ -29,5 +30,6 @@ def draw_smiley(x,y):
     t.goto(x+10, y+20)
     t.goto(x+25, y+40)
     t.width(1)
+    
 turtle.onscreenclick(draw_smiley)
 input("hueryfgui")
